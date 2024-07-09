@@ -1,0 +1,22 @@
+{
+  "name": "@galkin/zoom-webhooks",
+  "version": "0.1.0",
+  "keywords": [
+    "zoom",
+    "webhooks",
+    "meetings"
+  ],
+  "homepage": "https://github.com/galkin/zoom-webhooks",
+  "repository": {
+    "type": "git",
+    "homepage": "https://github.com/galkin/zoom-webhooks"
+  },
+  "license": "UNLICENSED",
+  "author": "Nikita Galkin",
+  "types": "index.d.ts",
+  "scripts": {
+    "pregenerate": "npm run prepare-spec",
+    "generate": "npx openapi-typescript specs/ZoomAPIEvents-Meeting-spec-prepared.json -o ./generated.d.ts",
+    "prepare-spec": "./scripts/prepare-spec.js"
+  }
+}
